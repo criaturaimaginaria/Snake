@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let speed = 0.9
       let intervalTime = 0
       let interval = 0
-  
+     
   
     //start & restart------------------------------------------
     function startGame() {
@@ -25,13 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreDisplay.innerText = score
         intervalTime = 80
         currentSnake = [2,1,0]
+
+        
+
         currentIndex = 0
         currentSnake.forEach(index => squares[index].classList.add('snake'))
         interval = setInterval(moveOutcomes, intervalTime)
     }
 
    
-  
+    
     //Snake function--------------------------------------------------
     function moveOutcomes() {
   
@@ -42,9 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
             (currentSnake[0] % width === 0 && direction === -1) || //if  hits left wall
             (currentSnake[0] - width < 0 && direction === -width) ||  //if  hits the top
             squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
+            
          ) {
            return clearInterval(interval ) //clear the interval if any of the above happen
         }
+       
             
               const tail = currentSnake.pop() //removes last item of the array and shows it
               squares[tail].classList.remove('snake')  //removes class of snake from the TAIL
@@ -61,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       clearInterval(interval)
                       intervalTime = intervalTime * speed
                       interval = setInterval(moveOutcomes, intervalTime)
+                 
 
                         //Levels------------------------------------------
                           // if(scoreDisplay.innerText  == 2  ){
@@ -79,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
            
            squares[currentSnake[0]].classList.add('snake')
-
+           
     }
   
   
@@ -107,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             
           }
-
+          
     document.addEventListener('keyup', control)
     startBtn.addEventListener('click' || '32', startGame)
   })

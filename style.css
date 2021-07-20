@@ -1,25 +1,36 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
+
 
 body{
-    background-color: grey;
+    /* background-color: rgb(0, 209, 122); */
+    background-color: rgb(61, 111, 144);
     text-align: center;
-    display: flex;
-  justify-content: space-around;
-  align-items: center;
+    background: linear-gradient(90deg, rgb(36, 180, 108) 0%, rgb(48, 118, 158) 100%);
+    font-family: 'Times New Roman', Times, serif;
 }
 
+h1{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
 .start{
     font-size: 2em;
+    margin: 0.8em;
 }
 .score{
-    font-size: 1.5em;
+    font-size: 1.8em;
+    margin: 0.5em;
 }
 
 #grid{
-    margin-top: 10%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
     width: 400px;
     height: 400px;
     display: flex;
@@ -35,10 +46,24 @@ body{
 }
 
 .snake{
-    background-color: rgb(0, 158, 8);
+    background-color: rgb(55, 190, 14);
   
 }
 
 .apple{
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(184, 14, 14);
+}
+
+.start{
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em;
+    padding: 0.3em;
+    
+}
+
+.start :hover{
+    color: rgb(170, 0, 0);
+    background-color: crimson;
+   
 }
