@@ -25,10 +25,10 @@ body{
 }
 
 .snake{
-    background-color: rgb(0, 219, 11);
+    background-color: rgb(0, 158, 8);
   
 }
 
 .apple{
-    background-color: rgb(67, 67, 255);
+    background-color: rgb(255, 0, 0);
 }
