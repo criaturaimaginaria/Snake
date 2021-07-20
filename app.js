@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         randomApple()
         direction = 1
         scoreDisplay.innerText = score
-        intervalTime = 200
+        intervalTime = 80
         currentSnake = [2,1,0]
         currentIndex = 0
         currentSnake.forEach(index => squares[index].classList.add('snake'))
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             (currentSnake[0] - width < 0 && direction === -width) ||  //if  hits the top
             squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
          ) {
-           return clearInterval(interval) //clear the interval if any of the above happen
+           return clearInterval(interval ) //clear the interval if any of the above happen
         }
             
               const tail = currentSnake.pop() //removes last item of the array and shows it
@@ -63,17 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
                       interval = setInterval(moveOutcomes, intervalTime)
 
                         //Levels------------------------------------------
-                          if(scoreDisplay.innerText  == 2  ){
-                            interval = 150 
-                          }else if(scoreDisplay.innerText  == 6){
-                            interval = 100 
-                          }else if(scoreDisplay.innerText  == 10){
-                            interval = 50 
-                          }else if(scoreDisplay.innerText  == 15){
-                            interval = 30 
-                          }else if(scoreDisplay.innerText  == 20){
-                            interval = 20 
-                          }
+                          // if(scoreDisplay.innerText  == 2  ){
+                          //   interval = 160 
+                          // }else if(scoreDisplay.innerText  == 6){
+                          //   interval = 130 
+                          // }else if(scoreDisplay.innerText  == 12){
+                          //   interval = 110 
+                          // }else if(scoreDisplay.innerText  == 15){
+                          //   interval = 100 
+                          // }else if(scoreDisplay.innerText  == 20){
+                          //   interval = 80 
+                          // }
+                       
                         //-------------------------------------------------
                 }
            
