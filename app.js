@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let currentSnake = [2, 1, 0] 
       let direction = 1
       let score = 0
-      let speed = 0.9
+      let speed = 1
       let intervalTime = 0
       let interval = 0
      
@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
             
          ) {
+          document.getElementById('crash').play();
            return clearInterval(interval ) //clear the interval if any of the above happen
         }
        
@@ -66,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
                       clearInterval(interval)
                       intervalTime = intervalTime * speed
                       interval = setInterval(moveOutcomes, intervalTime)
-                 
+                      document.getElementById('apple').play();
+                      
 
                         //Levels------------------------------------------
                           // if(scoreDisplay.innerText  == 2  ){
@@ -110,10 +112,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (e.keyCode === 40) {
                   direction =  +width   // key down
                 }
-
-            
+   
           }
-          
+// --------------------------------------------------------------------------
+
+          // Sounds for the snake         
+          document.addEventListener('keydown', function(e) {
+            if (e.keyCode == 39) {
+              document.getElementById('snakeTurn').play();
+            }
+            if (e.keyCode == 38) {
+              document.getElementById('snakeTurn').play();
+            }
+            if (e.keyCode == 37) {
+              document.getElementById('snakeTurn').play();
+            }
+            if (e.keyCode == 40) {
+              document.getElementById('snakeTurn').play();
+            }
+          });
+
+
+          // sound for the apple
+          // document.addEventListener('keydown', function(e) {
+          //   if (e.keyCode == 65) {
+          //     document.getElementById('audio').play();
+          //   }
+          // });
+        
+
     document.addEventListener('keyup', control)
     startBtn.addEventListener('click' || '32', startGame)
   })
