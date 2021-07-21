@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let currentSnake = [2, 1, 0] 
       let direction = 1
       let score = 0
-      let speed = 1
+      let speed = 0.9
       let intervalTime = 0
       let interval = 0
      
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         randomApple()
         direction = 1
         scoreDisplay.innerText = score
-        intervalTime = 80
+        intervalTime = 120
         currentSnake = [2,1,0]
 
         
@@ -132,14 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
 
-
-          // sound for the apple
-          // document.addEventListener('keydown', function(e) {
-          //   if (e.keyCode == 65) {
-          //     document.getElementById('audio').play();
-          //   }
-          // });
-        
 
     document.addEventListener('keyup', control)
     startBtn.addEventListener('click' || '32', startGame)
