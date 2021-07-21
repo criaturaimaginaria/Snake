@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -10,12 +10,13 @@ body{
     background-color: rgb(61, 111, 144);
     text-align: center;
     background: linear-gradient(90deg, rgb(36, 180, 108) 0%, rgb(48, 118, 158) 100%);
-    font-family: 'Times New Roman', Times, serif;
+    
 }
 
 h1{
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    font-size: 3em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 .start{
     font-size: 2em;
@@ -55,11 +56,15 @@ h1{
 }
 
 .start{
+    background: none;
     margin-left: auto;
     margin-right: auto;
-    width: 5em;
+    width: 7em;
     padding: 0.3em;
+    font-weight:800;
     border-radius: 8px;
-    border-style:solid;   
+    border-style:solid; 
+    border-width: 0.08em;
+    border-color: black; 
 }
 
